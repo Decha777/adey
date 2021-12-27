@@ -6,6 +6,9 @@ export default function HandleBlog(req, res, next) {
   // Getting Method from request
   const httpMethod = req.method;
 
+  // catch incomming data
+  const { title, category, image, content, author } = req.body;
+
   const filepath = path.join(process.cwd(), "Data", "blog.json");
   const fileData = fs.readFileSync(filepath);
   const data = JSON.parse(fileData);
@@ -22,8 +25,6 @@ export default function HandleBlog(req, res, next) {
     case "POST":
       // POST api/blog  => Create a new blog
 
-      // catch incomming data
-      const { title, category, image, content, author } = req.body;
       // creating new blog
       const newblog = {
         id: Date.now(),
@@ -51,6 +52,7 @@ export default function HandleBlog(req, res, next) {
       break;
     case "DELETE":
       // DELETE api/blog  => Delete a blog
+
       break;
     default:
       // Unhandled Methods

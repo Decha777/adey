@@ -1,1 +1,18 @@
-[{"id":1640600662356,"title":"blog 1","image":"","content":"This is the firt blog made by next js.","author":"Decha"},{"id":1640601565556,"title":"Happy life","category":"Health","image":"file:///C:/Users/D/Pictures/21.jpg","content":"Health is the most important thing in this world.","author":"Eden Eshetu"},{"id":1640602645558,"title":"Happy life 2","category":"Health","image":"file:///C:/Users/D/Pictures/21.jpg","content":"Health is the most important thing in this world.","author":"Eden Eshetu"}]
+[
+  {
+    "id": 1640601565556,
+    "title": "Happy life",
+    "category": "Health",
+    "image": "file:///C:/Users/D/Pictures/21.jpg",
+    "content": "Health is the most important thing in this world.",
+    "author": "Eden Eshetu"
+  },
+  {
+    "id": 1640614669760,
+    "title": "Happy life 3",
+    "category": "Health",
+    "image": "file:///C:/Users/D/Pictures/21.jpg",
+    "content": "Health is the most important thing in this world.",
+    "author": "Eden Eshetu"
+  }
+]
