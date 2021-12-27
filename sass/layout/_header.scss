@@ -1,0 +1,26 @@
+.headerNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 2rem;
+  background-color: $secondary;
+
+  &__logo {
+    background-color: orangered;
+  }
+
+  &__item {
+    display: flex;
+    text-decoration: none;
+
+    li {
+      list-style: none;
+    }
+    a {
+      color: $white;
+      text-transform: uppercase;
+      padding: 2rem;
+    }
+  }
+}
