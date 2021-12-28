@@ -9,51 +9,55 @@ export default function handleProducts(req, res) {
   // read and retrun  file
   const readDummyFile = () => {
     const fileData = fs.readFileSync(filePath);
-
     // parse json to String
     const data = JSON.parse(fileData);
     return data;
-    console.log(typeof data);
   };
 
-  // POST Method
-  if (req.method === "POST") {
-    // destructuring incoming data
-    const { title, desc, price, img } = req.body;
+  // Catch Request Methods
+  const httpMethod = req.method;
 
-    // creating new product => Es6
-    const newproduct = {
-      id: Date.now(),
-      title,
-      desc,
-      price,
-      img,
-    };
+  switch (httpMethod) {
+    case "GET":
+      // getting data from file
+      const data = readDummyFile();
 
-    // getting old data from file.
-    const newData = readDummyFile();
+      // responding all the file products
+      res.status(200).json({
+        success: true,
+        products: data,
+      });
+      break;
+    case "POST":
+      // destructuring incoming data
+      const { title, desc, price, img } = req.body;
 
-    // appending new product to old file at end.
-    newData.push(newproduct);
+      // creating new product => Es6
+      const newproduct = {
+        id: Date.now(),
+        title,
+        desc,
+        price,
+        img,
+      };
 
-    // writting the new product to file
-    fs.writeFileSync(filePath, JSON.stringify(newData));
+      // getting old data from file.
+      const newData = readDummyFile();
 
-    // responsing the new product
-    res.status(201).json({
-      success: true,
-      product: newproduct,
-    });
-  }
-  // GET method
-  else if (req.method === "GET") {
-    // getting data from file
-    const data = readDummyFile();
+      // appending new product to old file at end.
+      newData.push(newproduct);
 
-    // responding all the file products
-    res.status(200).json({
-      success: true,
-      product: data,
-    });
+      // writting the new product to file
+      fs.writeFileSync(filePath, JSON.stringify(newData));
+
+      // responsing the new product
+      res.status(201).json({
+        success: true,
+        product: newproduct,
+      });
+      break;
+    default:
+      res.setHeader("Allow", ["GET", "POST"]);
+      res.status(405).end(`${httpMethod} Method Not Allowed🤢.`);
   }
 }

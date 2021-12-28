@@ -13,8 +13,9 @@ export default function handleSinglBlog(req, res, next) {
   const data = JSON.parse(filedata);
 
   // Findding the requested blog and it's index
-  const Blog = data.find((b) => b.id == parseInt(blogid));
+  const Blog = data.find((b) => b.id === parseInt(blogid));
   const index = data.indexOf(Blog);
+  console.log(index);
 
   switch (httpMethod) {
     // GET /api/blog/:id  => Get single blog
@@ -52,6 +53,7 @@ export default function handleSinglBlog(req, res, next) {
 
     // DELETE /api/blog:id    => Delete a single blog
     case "DELETE":
+      // Check if the blog exist first
       if (index !== -1) {
         data.splice(index, 1);
         res.status(200).json({
