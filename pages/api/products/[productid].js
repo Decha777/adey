@@ -48,15 +48,18 @@ export default function singleProductHandler(req, res, next) {
           message: `Product ${productid} Not Found😡😡.`,
         });
       }
+      // Wrte the Update to file
+      fs.writeFileSync(filepath, JSON.stringify)(data);
       break;
     //   DELETE /api/products/:id  => Delete product by ID
     case "DELETE":
       // Check if the Product exits first
       if (index !== -1) {
-        data.slice(index, 1);
+        data.splice(index, 1);
         res.status(200).json({
           sucess: true,
           message: `Product ${productid} Deleted😡😀.`,
+          data,
         });
       } else {
         res.status(404).json({
@@ -64,6 +67,8 @@ export default function singleProductHandler(req, res, next) {
           message: `Product ${productid} Not Found😡😡.`,
         });
       }
+      // Write the remaing data back
+      fs.writeFileSync(filepath, JSON.stringify(data));
       break;
     //   Unhandled Http Methods
     default:
