@@ -1,0 +1,80 @@
+[
+  {
+    "id": 1640704169968,
+    "shippingInfo": {
+      "address": "Wereda 04",
+      "city": "Addis Ababa",
+      "phoneNo": "0912345678",
+      "country": "Ethiopia"
+    },
+    "user": "Aron_the_Prince",
+    "orderItems": [
+      {
+        "name": "Habesha Dress",
+        "quantity": 3,
+        "image": "C:/Users/D/Pictures/21.jpg",
+        "price": 145,
+        "productId": 1640693600291
+      }
+    ],
+    "paymentInfo": { "id": 1640693600291, "status": "Processing" },
+    "itemsPrice": 340,
+    "taxPrice": 15,
+    "shippingPrice": "36",
+    "totalPrice": 410,
+    "orderStatus": "Processing",
+    "paidAt": 1640704169968
+  },
+  {
+    "id": 1640704188774,
+    "shippingInfo": {
+      "address": "Wereda 04",
+      "city": "Addis Ababa",
+      "phoneNo": "0912345678",
+      "country": "Ethiopia"
+    },
+    "user": "Aron_the_Prince",
+    "orderItems": [
+      {
+        "name": "Habesha Dress",
+        "quantity": 3,
+        "image": "C:/Users/D/Pictures/21.jpg",
+        "price": 145,
+        "productId": 1640693600291
+      }
+    ],
+    "paymentInfo": { "id": 1640693600291, "status": "Processing" },
+    "itemsPrice": 340,
+    "taxPrice": 15,
+    "shippingPrice": "36",
+    "totalPrice": 410,
+    "orderStatus": "Processing",
+    "paidAt": 1640704188774
+  },
+  {
+    "id": 1640704189314,
+    "shippingInfo": {
+      "address": "Wereda 04",
+      "city": "Addis Ababa",
+      "phoneNo": "0912345678",
+      "country": "Ethiopia"
+    },
+    "user": "Aron_the_Prince",
+    "orderItems": [
+      {
+        "name": "Habesha Dress",
+        "quantity": 3,
+        "image": "C:/Users/D/Pictures/21.jpg",
+        "price": 145,
+        "productId": 1640693600291
+      }
+    ],
+    "paymentInfo": { "id": 1640693600291, "status": "Processing" },
+    "itemsPrice": 340,
+    "taxPrice": 15,
+    "shippingPrice": "36",
+    "totalPrice": 410,
+    "orderStatus": "Processing",
+    "paidAt": 1640704189314
+  }
+]
