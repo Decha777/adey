@@ -24,3 +24,19 @@
     }
   }
 }
+
+.card {
+  width: 50%;
+  margin: 20px auto;
+  height: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem;
+  background-color: $dark;
+  color: $light;
+
+  img {
+    border-radius: 50%;
+  }
+}

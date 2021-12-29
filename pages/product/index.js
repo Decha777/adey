@@ -1,43 +1,39 @@
-import React from "react";
-import { useState, useEffect } from "react";
-import PageLayout from "../../components/layout";
+import fs from "fs";
+import path from "path";
+
 import Image from "next/image";
 
-export default function Product() {
-  const [products, setProduct] = useState([]);
+import PageLayout from "../../components/layout";
 
-  const fetchData = async () => {
-    const response = await fetch("/api/products");
-    const data = await response.json();
-
-    setProduct(data);
-  };
-
-  useEffect(() => {
-    fetchData();
-  }, []);
-  const { products: data } = products;
-
+export default function ProductPage({ products }) {
   return (
-    <>
-      <PageLayout>
-        {data &&
-          data.map((product) => {
-            return (
-              <article key={product.id}>
-                <h1>{product.title}</h1>
-                <Image
-                  src={product.img}
-                  alt={product.title}
-                  width="150px"
-                  height="150px"
-                />
-                <p>{product.detail}</p>
-              </article>
-            );
-          })}
-      </PageLayout>
-      ;
-    </>
+    <PageLayout>
+      {products.map((product) => {
+        return (
+          <ul key={product.id}>
+            <h1>{product.title}</h1>
+            <Image
+              src={product.img}
+              alt={product.title}
+              width="120px"
+              height="120px"
+            />
+            <p>{product.desc}</p>
+          </ul>
+        );
+      })}
+    </PageLayout>
   );
+}
+
+export async function getStaticProps() {
+  const filePath = path.join(process.cwd(), "data", "product.json");
+  const JsonData = fs.readFileSync(filePath);
+  const data = JSON.parse(JsonData);
+  // console.log(data);
+  return {
+    props: {
+      products: data,
+    },
+  };
 }

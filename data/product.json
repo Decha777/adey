@@ -1,9 +1,23 @@
 [
   {
-    "id": 1640690137749,
-    "title": "Data",
+    "id": 1640774318528,
+    "title": "Mango",
     "desc": "best Data from Arba Minch",
     "price": "120",
-    "img": ""
+    "img": "/img/bg/1.jpg"
+  },
+  {
+    "id": 1640774450278,
+    "title": "Mango",
+    "desc": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis nisi repudiandae et incidunt minus placeat, vero fugit sint culpa sed, doloremque nam vel dolores minima, optio temporibus maxime labore error.",
+    "price": "120",
+    "img": "/img/bg/1.jpg"
+  },
+  {
+    "id": 1640774472354,
+    "title": "orange",
+    "desc": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis nisi repudiandae et incidunt minus placeat, vero fugit sint culpa sed, doloremque nam vel dolores minima, optio temporibus maxime labore error.",
+    "price": "120",
+    "img": "/img/bg/1.jpg"
   }
 ]

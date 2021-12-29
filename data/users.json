@@ -5,6 +5,14 @@
     "firstName": "Aaron",
     "lastName": "Eshetu",
     "age": 24,
-    "avator": "C:/Users/D/Pictures/21.jpg"
+    "avator": "/img/team/1.jpg"
+  },
+  {
+    "id": 1640693600297,
+    "userName": "Dagim",
+    "firstName": "Dagmawi",
+    "lastName": "Eshetu",
+    "age": 24,
+    "avator": "/img/team/2.jpg"
   }
 ]

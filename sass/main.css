@@ -146,4 +146,26 @@ button:hover {
   text-transform: uppercase;
   padding: 2rem;
 }
+
+.card {
+  width: 50%;
+  margin: 20px auto;
+  height: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 3rem;
+  background-color: #212529;
+  color: #f8f9fa;
+}
+
+.card img {
+  border-radius: 50%;
+}
 /*# sourceMappingURL=main.css.map */
