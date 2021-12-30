@@ -3,6 +3,8 @@ import PageLayout from "../components/layout";
 import Img from "next/image";
 
 export default function Index() {
+
+
   return (
     <PageLayout>
       <div className="container">
